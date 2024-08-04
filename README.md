@@ -52,3 +52,5 @@ After building as described above, add this to your `coc-settings.json`
     }
   },
 ```
+
+![screenshot](./assets/2024-08-04_13-28.png)
