@@ -20,15 +20,17 @@ au Filetype cairo set syntax=cairo
 
 ## Auto format
 
-Build cairo1 locally. https://github.com/starkware-libs/cairo
+Install latest `Scarb`, perferably with [asdf](https://docs.swmansion.com/scarb/download.html#install-via-asdf)
 
-Got the the dir and run `cargo build --release`
+```
+asdf install scarb latest
+```
 
-Add the following to `.vimrc`
+Add this autocmd to your `.vimrc`
 
 ```
 " cairo 1.0
-:autocmd BufWritePost *.cairo silent ! /path/to/cairo/target/release/cairo-format %
+:autocmd BufWritePost *.cairo silent ! /home/<USER>/.asdf/shims/scarb fmt
 ```
 
 ## Language server
@@ -41,7 +43,7 @@ Install latest `Scarb`, perferably with [asdf](https://docs.swmansion.com/scarb/
 asdf install scarb latest
 ```
 
-After building as described above, add this to your `coc-settings.json`
+Add this to your `coc-settings.json`
 
 ```
   "languageserver": {
